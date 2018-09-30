@@ -1,0 +1,31 @@
+.header {
+  color: #ee6e73;
+  font-weight: 300;
+}
+
+
+#new_animal {
+  width: 300px;
+}
+
+#float_left {
+  float:left;
+}
+
+#title {
+  font-size:20px;
+
+}
+
+#border {
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  border-radius: 10px;
+  padding: 15px;
+  
+}
+
+#comment {
+  float:right;
+}
