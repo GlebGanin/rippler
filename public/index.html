@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Animals</title>
+    <title>Ripple News</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- Compiled and minified CSS -->
@@ -17,14 +17,26 @@
   <body class="container">
     <h3 class="header">Ripple News</h3>
     <div id="buttons">
-      <button class="btn" id="scrape_ripple">Find New Articles</button>
+      <button onclick="location.href='/scrape_ripple'" class="btn" id="scrape_ripple">Find New Articles</button>
      
-      
+        
     </div>
+
+    <div>
+    <ul class="collapsible">
+        <li>
+          <div class="collapsible-header">
+            <!-- <i class="material-icons"></i> -->
+            First
+            <span class="badge">Click to Comment</span></div>
+          <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+        </li>
+    </ul>
+  </div>
 
     <br>
     <div>
-      <h5 class="header"> 10 Recent Ripple Articles:</h4>
+      <strong><h5 class="header"> 10 Recent Ripple Articles:</h5></strong>
     </div>
    
 

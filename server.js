@@ -1,12 +1,19 @@
 // Dependencies
 var express = require("express");
 var mongojs = require("mongojs");
+var request = require("request");
+var cheerio = require("cheerio");
 
 // Initialize Express
 var app = express();
 
+var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 // Set up a static folder (public) for our web app
 app.use(express.static("public"));
+app.set('view engine', 'ejs');
 
 // Database configuration
 // Save the URL of our database as well as the name of our collection
@@ -73,7 +80,7 @@ app.get("/scrape_ripple", function(req, res) {
   });
 
   // Send a "Scrape Complete" message to the browser
-  res.render("pages/display_news");
+  res.redirect("/");
 });
 
 // Set the app to listen on port 3000

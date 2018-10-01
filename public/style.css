@@ -4,8 +4,20 @@
 }
 
 
-#new_animal {
-  width: 300px;
+#link_to_article {
+  border-style: solid;
+  color:black;
+  border-color: rgba(224, 66, 66, 0.699);
+  background-color: #8fd1c680;
+  border-width: 3px;
+  border-radius:5px;
+  padding: 10px;
+  margin: 0px 50px 0px 00px;
+}
+
+
+#article_title {
+  background-color: #8fd1c680
 }
 
 #float_left {
@@ -14,6 +26,7 @@
 
 #title {
   font-size:20px;
+  float:left;
 
 }
 
