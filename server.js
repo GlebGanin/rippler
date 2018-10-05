@@ -46,8 +46,52 @@ app.get("/all", function(req, res) {
 });
 
 
+app.post("/new_comment", function(req, res) {
+  // console.log(req.body);
+  // Insert the note into the notes collection
+  db.rippleComments.insert(req.body, function(error, saved) {
+    // Log any errors
+    if (error) {
+      console.log(error);
+    }
+    else {
+      // Otherwise, send the note back to the browser
+      // This will fire off the success function of the ajax request
+      res.redirect("/");
+    }
+  });
+});
+
+
+app.get("/delete_comment/:id", function(req, res) {
+  // Remove a note using the objectID
+  db.rippleNews.remove(
+    {
+      _id: mongojs.ObjectID(req.params.id)
+    },
+    function(error, removed) {
+      // Log any errors from mongojs
+      if (error) {
+        console.log(error);
+        res.send(error);
+      }
+      else {
+        // Otherwise, send the mongojs response to the browser
+        // This will fire off the success function of the ajax request
+        console.log(removed);
+
+        setTimeout(function () { 
+          res.redirect("/");}, 1000);
+      }
+    }
+  );
+});
+
+
 
 app.get("/scrape_ripple", function(req, res) {
+  db.rippleNews.remove({}, function(err) {
+    if(err) console.log(err);
   // Make a request for the news section of `ycombinator`
   request("https://ripple.com/category/insights/news/", function(error, response, html) {
     // Load the html body from request into cheerio
@@ -78,12 +122,16 @@ app.get("/scrape_ripple", function(req, res) {
       }
     });
   });
+}); 
+    setTimeout(function () { 
+      res.redirect("/");}, 3000);
+    });
 
-  // Send a "Scrape Complete" message to the browser
-  res.redirect("/");
-});
+
 
 // Set the app to listen on port 3000
 app.listen(3000, function() {
   console.log("App running on port 3000!");
 });
+
+
