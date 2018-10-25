@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Digume</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div id="login_window">
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper" id="profile_builder_nav">
+          <a href="#" class="brand-logo" id="nav_logo">Digume </a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="badges.html">Sign Up</a></li>
+            <li><a href="collapsible.html">Log In</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+
+    <div>
+      <center>
+
+        <div class="z-depth-5" id="shadow">
+
+          <div class="login">
+
+            <ul class="collapsible">
+              <li>
+                <div class="collapsible-header z-depth-4" id="login_box">
+
+                  Login to your Account
+
+                  <span class="badge">
+                    <i class="tiny material-icons" id="plus_sign">add</i>
+                  </span>
+
+                </div>
+
+                <div class="collapsible-body z-depth-4" id="login_box_body">
+                  <form class="col s12" action="/login" method="POST">
+                    <div class="row">
+                      <div class="input-field col s12" id="user_name">
+                        <input placeholder="Enter user name here" id="user_name" type="text" class="validate">
+                        <label for="first_name"> Enter your User Name/ Email </label>
+                      </div>
+
+                      <div class="input-field col s12">
+                        <input placeholder="Enter password" id="login_password" type="text" class="validate">
+                        <label for="first_name">Enter Your Password </label>
+                      </div>
+
+                      <button class="btn waves-effect waves-light" type="submit" name="action" id="login_button">Login
+                        <i class="material-icons right">send</i>
+                      </button>
+                  </form>
+                </div>
+              </li>
+            </ul>
+
+            <ul class="collapsible" id="margin_top">
+              <li>
+                <div class="collapsible-header z-depth-4" id="create_box">
+
+                  Create a Digume Profile
+                  <span class="badge">
+                    <i class="tiny material-icons" id="plus_sign">add</i>
+                  </span>
+                </div>
+                <div class="collapsible-body z-depth-4" id="create_box_body">
+                  <form class="col s12" action="/create_profile" method="POST">
+                    <div class="input-field col s12">
+                      <input placeholder="Enter user name here" id="username" type="text" class="validate" name="username">
+                      <label for="username">Email Address </label>
+
+                    </div>
+
+                    <div class="input-field col s12">
+                      <input placeholder="Choose a password" id="password" type="text" class="validate" name="password">
+                      <label for="password"> New Password </label>
+
+                    </div>
+
+                    <button class="btn waves-effect waves-light" type="submit" id="create_button">
+                      Create Account
+                      <i class="material-icons right"> send</i>
+                    </button>
+                  </form>
+                </div>
+              </li>
+            </ul>
+
+
+          </div>
+        </div>
+      </center>
+    </div>
+
+    <img src="goldengate.jpg">
+
+  </div>
+
+  <!-- <div>
+    <ul class="collapsible">
+      <li>
+        <div class="collapsible-header">
+
+          First
+          <span class="badge">Click to Comment</span></div>
+        <div class="collapsible-body">
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <br>
+  <div>
+    <strong>
+      <h5 class="header"> 10 Recent Ripple Articles:</h5>
+    </strong>
+  </div> -->
+
+
+  <!-- The Modal -->
+  <!-- <div id="myModal" class="modal"> -->
+
+  <!-- Modal content -->
+  <!-- <div class="modal-content">
+      <span class="close">&times;</span>
+
+      <div id="comment_box">
+
+        <div id="display_comments">
+          <h4> Comments will go here </h4>
+        </div>
+
+        <form action="/new_comment" method="POST">
+
+          <input id="new_comment" type="text" placeholder="Type yoru notes or comments here" name="comment">
+          <br>
+          <button class="btn" id="add_comment">Add Comment</button>
+
+        </form>
+
+      </div>
+    </div>
+
+  </div> -->
+
+
+
+  <!-- <div id="results">
+
+  </div> -->
+
+  <br>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

@@ -10,14 +10,28 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cheerio": "^0.20.0",
-    "express": "^4.13.4",
-    "mongojs": "^2.3.0",
-    "request": "^2.69.0",
     "body-parser": "^1.18.3",
-    "ejs": "^1.0.0"
+    "cheerio": "^0.20.0",
+    "ejs": "^1.0.0",
+    "express": "^4.13.4",
+    "express-ejs-layouts": "^1.1.0",
+    "express-session": "^1.15.6",
+    "install": "^0.12.2",
+    "linkedin": "0.0.2",
+    "mongojs": "^2.3.0",
+    "node-linkedin": "^0.5.6",
+    "npm": "^6.4.1",
+    "request": "^2.69.0"
   },
   "devDependencies": {},
   "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GlebGanin/rippler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GlebGanin/rippler/issues"
+  },
+  "homepage": "https://github.com/GlebGanin/rippler#readme",
   "description": ""
 }

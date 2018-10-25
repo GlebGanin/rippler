@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Digume</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+  <div class="row">
+
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper" id="profile_builder_nav">
+          <a href="#" class="brand-logo" id="nav_logo">Digume Profile Builder </a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="collapsible.html">Log Out</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+
+    <!-- //LEFT SIDE OF PAGE -->
+
+    <div class="col s2" id="main_window_left">
+      <div>
+        <img id="linkedin_logo" src="https://cdn.worldvectorlogo.com/logos/linkedin.svg">
+      </div>
+    </div>
+
+
+
+    <!-- //RIGHT SIDE OF PAGE -->
+
+    <div class="col s10" id="main_window_right">
+
+      <div class="col s10 offset-s1" id="builder_input">
+        <p id="builder_input_text"> You can connect to your LinkedIn profile by clicking here:</p>
+
+        <div class="col s6">
+          <form action="/oauth/linkedin" method="GET">
+            <center>
+              <button class="btn waves-effect waves-light btn-large" id="import_linkedin" type="submit">Connect to
+                LinkedIn
+                <i class="material-icons right">add_circle_outline</i>
+              </button>
+            </center>
+          </form>
+        </div>
+
+        <div class="col s6">
+          <form action="/load_user_info" method="GET">
+            <center>
+              <button class="btn waves-effect waves-light btn-large" id="load_linkedin" type="submit">Load
+                Your Data
+                <i class="material-icons right">add_circle_outline</i>
+              </button>
+            </center>
+          </form>
+        </div>
+        <center>
+          <div class="progress hidden" id="progress">
+            <div class="indeterminate"></div>
+          </div>
+        </center>
+      </div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Footer Content</h5>
+          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2014 Copyright Text
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="app.js"></script>
+</body>
+
+
+</html>
